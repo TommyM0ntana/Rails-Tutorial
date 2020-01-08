@@ -9,7 +9,13 @@ gem 'bcrypt',              '3.1.12'
 gem 'bootstrap-sass',       '3.3.7'
 gem 'rails-controller-testing'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+group :development, :test do
+ gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
