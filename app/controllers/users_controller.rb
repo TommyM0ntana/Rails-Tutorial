@@ -24,5 +24,4 @@ def user_params
                                :password_confirmation)
     end
 
-
 end
